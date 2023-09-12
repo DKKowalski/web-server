@@ -12,7 +12,7 @@ weatherForm.addEventListener("submit", function (e) {
   e.preventDefault();
   locationEl.textContent = `wait...`;
   forecastEl.textContent = `wait...`;
-  url = `http://localhost:3301/weather?address=${address.value}`;
+  url = `/weather?address=${address.value}`;
   fetch(url)
     .then((res) => {
       return res.json();
@@ -25,7 +25,7 @@ weatherForm.addEventListener("submit", function (e) {
         if (document.querySelector(".error")) {
           document.querySelector(".error").remove();
         }
-      
+
         setTimeout(() => {
           locationEl.textContent = data.location;
           forecastEl.textContent = data.forecast;
