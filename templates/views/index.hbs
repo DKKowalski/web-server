@@ -1,0 +1,45 @@
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="./css/output.css" />
+  <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+  <title>Weather</title>
+
+</head>
+
+<body>
+  <div class="flex flex-col m-auto max-w-6xl min-h-full min-w-screen items-center ">
+    {{>header}}
+    <main>
+      <div>
+        <form class="flex items-center justify-center">
+          <!-- <label for="address">Enter Address:</label>-->
+          <input class="shadow-lg flex-grow px-12 py-6 capitalize text-left outline-none border border-purple-100" type="text" name="address"
+            placeholder="input address for weather" id="address">
+          <button class="bg-purple-500 text-white px-4 py-2 border border-purple-400 shadow-sm">Go! </button>
+        </form>
+      </div>
+
+      <section
+        class="weather-data mt-10 bg-purple-400 p-8 text-white border rounded shadow-md font-bold flex flex-col justify-center ">
+        <div class="flex items-center gap-3"><span>
+            <ion-icon class="font-bold h-8 w-8" name="cloud-outline"></ion-icon>
+          </span><span class="forecast">Null</span></div>
+        <div class="flex items-center gap-3"><span>
+            <ion-icon class="font-bold h-8 w-8" name="location-outline"></ion-icon>
+          </span> <span class="location">Null</span></div>
+      </section>
+
+      
+    </main>
+
+  </div>
+  {{>footer}}
+</body>
+<script src="/js/app.js"></script>
+
+</html>

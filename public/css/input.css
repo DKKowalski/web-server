@@ -1,0 +1,16 @@
+@import url();
+
+@tailwind utilities;
+@tailwind components;
+@tailwind base;
+
+h1 {
+  @apply p-4 mt-4 bg-[#153d6c] ;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  
+}
